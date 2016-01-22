@@ -4,5 +4,26 @@
   "private": true,
   "dependencies": {
     "react-native": "^0.17.0"
-  }
+  },
+  "description": "A React Native component for building maps with the AMap Android SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laoqiu/react-native-amap.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "mapview",
+    "android"
+  ],
+  "author": "laoqiu.com@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laoqiu/react-native-amap/issues"
+  },
+  "homepage": "https://github.com/laoqiu/react-native-amap#readme"
 }
