@@ -89,6 +89,7 @@ import com.laoqiu.amap.AMapReactPackage;
 ```
 // file: android/app/src/main/AndroidManifest.xml
 	...
+	<uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -98,13 +99,13 @@ import com.laoqiu.amap.AMapReactPackage;
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-        <application
+    <application
       android:allowBackup="true"
       android:label="@string/app_name"
       android:icon="@mipmap/ic_launcher"
       android:theme="@style/AppTheme">
       <meta-data
          android:name="com.amap.api.v2.apikey"
-         android:value="your app key"/>
+         android:value="your app key here"/>
    ...
 ```

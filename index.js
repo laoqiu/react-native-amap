@@ -11,7 +11,12 @@ let iface = {
     importantForAccessibility: PropTypes.string,
     onLayout: PropTypes.bool,
     // custom
-    mode: PropTypes.number,
+    mapType: PropTypes.number,
+    showsUserLocation: PropTypes.bool,
+    onMapClick: PropTypes.bool,
+    onRegionChange: PropTypes.bool,
+    annotations: PropTypes.array,
+    region: PropTypes.object,
   }
 }
 

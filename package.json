@@ -1,12 +1,12 @@
 {
   "name": "react-native-amap",
   "version": "0.0.1",
-  "private": true,
   "dependencies": {
     "react-native": "^0.17.0"
   },
   "description": "A React Native component for building maps with the AMap Android SDK",
   "main": "index.js",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,8 +20,8 @@
     "mapview",
     "android"
   ],
-  "author": "laoqiu.com@gmail.com",
-  "license": "ISC",
+  "author": "laoqiu",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/laoqiu/react-native-amap/issues"
   },
