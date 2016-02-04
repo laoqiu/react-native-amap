@@ -1,7 +1,7 @@
 {
   "name": "react-native-amap",
   "version": "0.0.1",
-  "dependencies": {
+  "peerDependencies": {
     "react-native": "^0.17.0"
   },
   "description": "A React Native component for building maps with the AMap Android SDK",
