@@ -1,7 +1,6 @@
 # React Native AMap
 A React Native component for building maps with the [AMap Android SDK](http://lbs.amap.com/api/android-sdk/summary/).
 
-
 ## Example
 ```
 ...
