@@ -27,6 +27,5 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:0.19.+'
-    compile files('libs/AMap_android_API_2DMap_Lib_V2.7.0_20151124.jar')
-    compile files('libs/AMap_Location_v2.3.0_20160112.jar')
+    compile files('libs/AMap2DMap_2.9.1_AMapLocation_3.0.0_20161018.jar')
 }

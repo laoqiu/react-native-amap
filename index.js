@@ -1,4 +1,5 @@
-import { PropTypes, requireNativeComponent } from 'react-native';
+import { PropTypes } from 'react';
+import { requireNativeComponent } from 'react-native';
 
 let iface = {
   name: 'RCTAMap',
@@ -14,6 +15,7 @@ let iface = {
     mapType: PropTypes.number,
     showsUserLocation: PropTypes.bool,
     onMapClick: PropTypes.bool,
+    onMarkerClick: PropTypes.bool,
     onRegionChange: PropTypes.bool,
     annotations: PropTypes.array,
     region: PropTypes.object,

@@ -3,11 +3,14 @@ import android.util.Log;
 import android.graphics.Color;
 import android.graphics.BitmapFactory;
 import android.os.StrictMode;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import com.amap.api.maps2d.AMap;
 import com.amap.api.maps2d.MapView;
 import com.amap.api.maps2d.CameraUpdateFactory;
 import com.amap.api.maps2d.model.CameraPosition;
 import com.amap.api.maps2d.model.LatLng;
+import com.amap.api.maps2d.model.Marker;
 import com.amap.api.maps2d.model.MarkerOptions;
 import com.amap.api.maps2d.model.BitmapDescriptorFactory;
 import com.amap.api.maps2d.model.PolylineOptions;
@@ -25,6 +28,7 @@ import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
 import javax.annotation.Nullable;
+import java.net.URL;
 
 
 public class AMapViewManager extends SimpleViewManager<MapView> {
@@ -76,6 +80,25 @@ public class AMapViewManager extends SimpleViewManager<MapView> {
         });
     }
 
+    @ReactProp(name = "onMarkerClick", defaultBoolean = false)
+    public void onMarkerClick(final MapView view, Boolean value) {
+        view.getMap().setOnMarkerClickListener(new AMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                WritableMap event = Arguments.createMap();
+                //event.putDouble("latitude", point.latitude);
+                //event.putDouble("longitude", point.longitude);
+                int id = (int) marker.getObject();
+                event.putInt("id", id);
+                ReactContext reactContext = (ReactContext) view.getContext();
+                reactContext
+                        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                        .emit("onMarkerClick", event);
+                return true;
+            }
+        });
+    }
+
     @ReactProp(name = "onRegionChange", defaultBoolean = false)
     public void onRegionChange(final MapView view, Boolean value) {
         view.getMap().setOnCameraChangeListener(new AMap.OnCameraChangeListener() {
@@ -114,6 +137,9 @@ public class AMapViewManager extends SimpleViewManager<MapView> {
     }
 
     public void setAnnotations(MapView view, @Nullable ReadableArray value, boolean clearMap) {
+        /** setAnnotations
+         * @params value: [{'type':'point', 'coordinates': [120.23, 30.12], 'title': 'text', 'subtitle': '', 'img': 'path/to/img.png'}]
+         **/
         AMap map = view.getMap();
         if (value == null || value.size() < 1) {
             Log.e(RCT_CLASS, "Error: No annotations");
@@ -131,18 +157,30 @@ public class AMapViewManager extends SimpleViewManager<MapView> {
                     double latitude = annotation.getArray("coordinates").getDouble(0);
                     double longitude = annotation.getArray("coordinates").getDouble(1);
                     LatLng markerCenter = new LatLng(latitude, longitude);
-                    MarkerOptions marker = new MarkerOptions();
-                    marker.position(markerCenter);
+                    MarkerOptions markerOption = new MarkerOptions();
+                    markerOption.position(markerCenter);
                     if (annotation.hasKey("title")) {
                         String title = annotation.getString("title");
-                        marker.title(title);
+                        markerOption.title(title);
                     }
                     if (annotation.hasKey("subtitle")) {
                         String subtitle = annotation.getString("subtitle");
-                        marker.snippet(subtitle);
+                        markerOption.snippet(subtitle);
                     }
-                    marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.location));
-                    map.addMarker(marker);
+                    if (annotation.hasKey("img")) {
+                        String path = annotation.getString("img");
+                        try {
+                            URL imgurl = new URL(path);
+                            Bitmap bmp = BitmapFactory.decodeStream(imgurl.openConnection().getInputStream());
+                            markerOption.icon(BitmapDescriptorFactory.fromBitmap(bmp));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    Marker marker = map.addMarker(markerOption);
+                    // 自定义属性
+                    int id = annotation.getInt("id");
+                    marker.setObject(id);
                 } else if (type.equals("polyline")) {
                     int coordSize = annotation.getArray("coordinates").size();
                     PolylineOptions polyline = new PolylineOptions();

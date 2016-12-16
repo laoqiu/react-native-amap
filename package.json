@@ -1,26 +1,86 @@
 {
-  "name": "react-native-amap",
-  "version": "0.0.3",
+  "_args": [
+    [
+      "react-native-amap",
+      "/Users/laoqiu/Projects/xiangke/app/xiangke"
+    ]
+  ],
+  "_cnpm_publish_time": 1456729363798,
+  "_from": "react-native-amap@latest",
+  "_id": "react-native-amap@0.0.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/react-native-amap",
+  "_nodeVersion": "5.0.0",
+  "_npmOperationalInternal": {
+    "host": "packages-9-west.internal.npmjs.com",
+    "tmp": "tmp/react-native-amap-0.0.3.tgz_1456729362585_0.8428314498160034"
+  },
+  "_npmUser": {
+    "email": "laoqiu.com@gmail.com",
+    "name": "laoqiu"
+  },
+  "_npmVersion": "3.5.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "react-native-amap",
+    "raw": "react-native-amap",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/react-native-amap/download/react-native-amap-0.0.3.tgz",
+  "_shasum": "b2d85a9b0b0f959721db2ccea774642b44055ae6",
+  "_shrinkwrap": null,
+  "_spec": "react-native-amap",
+  "_where": "/Users/laoqiu/Projects/xiangke/app/xiangke",
+  "author": {
+    "name": "laoqiu"
+  },
+  "bugs": {
+    "url": "https://github.com/laoqiu/react-native-amap/issues"
+  },
+  "dependencies": {},
   "description": "A React Native component for building maps with the AMap Android SDK",
-  "main": "index.js",
-  "private": false,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "noattachment": false,
+    "shasum": "b2d85a9b0b0f959721db2ccea774642b44055ae6",
+    "size": 842346,
+    "tarball": "http://registry.npm.taobao.org/react-native-amap/download/react-native-amap-0.0.3.tgz"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/laoqiu/react-native-amap.git"
-  },
+  "gitHead": "a3fe564278cb867b44a9d0e4905783e7c75c945b",
+  "homepage": "https://github.com/laoqiu/react-native-amap#readme",
   "keywords": [
     "react",
     "native",
     "mapview",
     "android"
   ],
-  "author": "laoqiu",
   "license": "BSD",
-  "bugs": {
-    "url": "https://github.com/laoqiu/react-native-amap/issues"
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "laoqiu.com@gmail.com",
+      "name": "laoqiu"
+    }
+  ],
+  "name": "react-native-amap",
+  "optionalDependencies": {},
+  "private": false,
+  "publish_time": 1456729363798,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laoqiu/react-native-amap.git"
   },
-  "homepage": "https://github.com/laoqiu/react-native-amap#readme"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.3"
 }
