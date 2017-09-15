@@ -1,15 +1,21 @@
 {
   "_args": [
     [
-      "react-native-amap",
-      "/Users/laoqiu/Projects/xiangke/app/xiangke"
+      {
+        "raw": "react-native-amap",
+        "scope": null,
+        "escapedName": "react-native-amap",
+        "name": "react-native-amap",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Volumes/Macintosh HD/MYHD/projects/pet/petparty"
     ]
   ],
-  "_cnpm_publish_time": 1456729363798,
   "_from": "react-native-amap@latest",
   "_id": "react-native-amap@0.0.3",
   "_inCache": true,
-  "_installable": true,
   "_location": "/react-native-amap",
   "_nodeVersion": "5.0.0",
   "_npmOperationalInternal": {
@@ -17,27 +23,29 @@
     "tmp": "tmp/react-native-amap-0.0.3.tgz_1456729362585_0.8428314498160034"
   },
   "_npmUser": {
-    "email": "laoqiu.com@gmail.com",
-    "name": "laoqiu"
+    "name": "laoqiu",
+    "email": "laoqiu.com@gmail.com"
   },
   "_npmVersion": "3.5.2",
   "_phantomChildren": {},
   "_requested": {
-    "name": "react-native-amap",
     "raw": "react-native-amap",
-    "rawSpec": "",
     "scope": null,
+    "escapedName": "react-native-amap",
+    "name": "react-native-amap",
+    "rawSpec": "",
     "spec": "latest",
     "type": "tag"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "http://registry.npm.taobao.org/react-native-amap/download/react-native-amap-0.0.3.tgz",
+  "_resolved": "https://registry.npmjs.org/react-native-amap/-/react-native-amap-0.0.3.tgz",
   "_shasum": "b2d85a9b0b0f959721db2ccea774642b44055ae6",
   "_shrinkwrap": null,
   "_spec": "react-native-amap",
-  "_where": "/Users/laoqiu/Projects/xiangke/app/xiangke",
+  "_where": "/Volumes/Macintosh HD/MYHD/projects/pet/petparty",
   "author": {
     "name": "laoqiu"
   },
@@ -49,10 +57,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "noattachment": false,
     "shasum": "b2d85a9b0b0f959721db2ccea774642b44055ae6",
-    "size": 842346,
-    "tarball": "http://registry.npm.taobao.org/react-native-amap/download/react-native-amap-0.0.3.tgz"
+    "tarball": "https://registry.npmjs.org/react-native-amap/-/react-native-amap-0.0.3.tgz"
   },
   "gitHead": "a3fe564278cb867b44a9d0e4905783e7c75c945b",
   "homepage": "https://github.com/laoqiu/react-native-amap#readme",
@@ -66,14 +72,13 @@
   "main": "index.js",
   "maintainers": [
     {
-      "email": "laoqiu.com@gmail.com",
-      "name": "laoqiu"
+      "name": "laoqiu",
+      "email": "laoqiu.com@gmail.com"
     }
   ],
   "name": "react-native-amap",
   "optionalDependencies": {},
   "private": false,
-  "publish_time": 1456729363798,
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",

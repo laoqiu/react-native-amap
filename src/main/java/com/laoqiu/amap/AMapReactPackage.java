@@ -17,6 +17,8 @@ import java.util.List;
 public class AMapReactPackage implements ReactPackage {
 
     private AMapViewManager glManager;
+    private AMapMarkerManager mkManager;
+    private AMapPolylineManager mpManager;
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
@@ -34,9 +36,13 @@ public class AMapReactPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        glManager = new AMapViewManager();
+        glManager = new AMapViewManager(reactContext);
+        mkManager = new AMapMarkerManager(reactContext);
+        mpManager = new AMapPolylineManager(reactContext);
         return Arrays.<ViewManager>asList(
-                glManager
+                glManager,
+                mkManager,
+                mpManager
         );
     }
 
